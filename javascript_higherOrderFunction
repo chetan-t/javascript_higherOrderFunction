@@ -1,0 +1,18 @@
+/*******************Higher order function***************/
+function calculate(operation,initialValue,numbers){
+    let total = initialValue;
+
+    for(const number of numbers){
+        console.log(number);
+        total = operation(total,number);
+    }    
+    return total;
+}
+function addition(n1,n2){
+    return n1 + n2;
+}
+
+let hof1 = calculate(addition,0,[1,2,3]);
+
+console.log(hof1);
+/***************end***************/
